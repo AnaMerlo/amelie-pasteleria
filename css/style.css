@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* reseteo buena practica */
+/* overflow tengo visible, hidder, scroll para lo que se va fuera de la caja */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+body{
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+.header{
+    width: 100%;
+    height: 100%;
+}
+.header__nav{
+    min-height: 100vh;
+    min-width: 200px;
+    position: relative;
+}
+.header__ul{
+    padding-top: 100px;
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 10;    
+}
+.header__li{
+    list-style: none;
+    padding: 20px;
+}
+/* averiguar background transparent */
+.header__a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 800;
+    font-size: 16px;
+}
+.header__a:hover{
+    color: rgba(0, 128, 0, 0.658);
+    font-weight: 800;
+}
+.fijo a{
+    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    position: fixed;
+    right: 75px;
+    bottom: 25px;
+    border-radius: 25px;
+    height: 35px;
+    padding: 10px;
+    width: 140px;
+    background-color: rgba(27, 25, 58, 0.842);
+    color: white;
+    text-align: center;
+}
+
+button{
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    height: 70px;
+    padding: 10px;
+    width: 150px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    margin-top: 200px;
+    margin-left: 50%;
+    text-align: center;
+    transition: 150ms;
+    position: relative;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.74);
+    letter-spacing: 0.5mm;
+}
+button:focus{
+    outline: none;
+}
+button:hover{
+    transform: translate(0, -5px);
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(143, 129, 129, 0.486);
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+}
+.header__span{
+    display: inline-block;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-size: 55px;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+}
+/* main{ */
+    /* min-height: 100vh; */
+    /* margin-right: 300px; */
+    /* margin-left: 300px; */
+    /* height: 100%; */
+/* } */
+.main{
+    padding-top: 10px;
+    background-color: #878282;
+    height: 100%;
+}
+.main__h2{
+    font-family: "PlayfairDisplay-Bold";
+    font-size: 40px;
+    text-align: center;
+    margin:100px 0px 50px 0px;
+}
+.main__section{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.section{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse ;
+    justify-content: center;
+    align-content: center;
+}
+.section__img{
+    padding: 10px;
+    flex: 0;
+}
+.section__flex1{
+    flex: 1;
+    padding-top: 10px;
+}
+.section__p{
+    font-family: "Montserrat-Regular";
+    font-size: 14px;
+    min-width: 200px;
+    font-size: 16px;
+    line-height: 1.5;
+    align-self: center;
+}
+.section__p--pb10{
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* cambiar a metodologia bem queda entonces titulo=main__h3 */
+.padre{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.titulo{
+    margin: 40px 0px 60px 0px;
+    font-weight: 600;
+    text-align: center;
+}
+.padre .hijo{
+width: 300px;
+height: 300px;
+margin: 20px;
+text-align: center;
+}
+.padre .hijo img{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+}
+.padre .hijo img:hover{
+    transform: scale(1.1);
+}
+.padre .hijo h4{
+    text-align: left;
+    margin-top: 10px;
+}
+.padre .hijo a{
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    color: black;
+}
+.padre .hijo a:hover{
+    color: rgba(34, 29, 29, 0.363);
+}
+.padre .hijo p{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(226, 37, 37);
+}
+.tienda{
+    margin: 50px 120px 0px 120px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(19, 17, 17);
+}
+.tienda a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+footer{
+    background-color: rgba(128, 123, 123, 0.5);
+    height: 300px;
+}
+.redes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+.redes p{
+    font-size: 40px;
+    color: green;
+    margin: 20px 0px 10px 0px;
+    width: 250px;
+    height: 70px;
+    min-width: 200px;
+    text-align: center;
+}
+.redes a{
+    text-align: center;
+    margin-top: 10px;
+}
+.final{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 70px;
+}
+.ancho{
+    width: 100%;
+}
+.menu2{
+    padding-top: 50px;
+    text-align: center;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: auto;
+
+}
+.menu2 li{
+    list-style: none;
+    padding: 20px;
+}
+.menu2 a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.menu2 a:hover{
+    color: rgba(0, 128, 0, 0.658);
+    font-weight: 800;
+}
+.bg{
+    background-image: url(../assets/img/cupcake2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.text{
+    text-align: center;
+    margin: 22px 0px 50px 0px;
+    padding: 116px 0px 110px 0px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 55px;
+    color: white;
+}
+.overlay{
+    position: relative;
+    z-index: 1;
+}
+.overlay::after{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:#000;
+    opacity: 0.65;
+}
+fieldset{
+    width: 500px;
+    height: 800px;
+    margin: auto;
+}
+legend{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 350px;
+    height: 700px;
+    padding: 10px;
+}
+form label{
+    font-weight: bold;
+    display: inline-block;
+}
+form input{
+    width: 200px;
+    height: 20px;
+    border-radius: 3px;
+    margin: 5px 0;
+    padding-left: 5px;
+}
+form input[type="submit"],
+form input[type="reset"]{
+    width: 100px;
+    height: 25px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    display: inline-block;
+}
+form input[type="submit"],
+form input[type="reset"]:hover{
+    cursor: pointer;
+}
+form input[type="checkbox"]{
+    width: 20px;
+}
+form textarea{
+    width:250px ;
+    height: 150px;
+    border-radius: 3px;
+    resize: horizontal;
+    margin-top: 5px;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+.fondo{
+    width: 100%;
+    background-image: url(../assets/img/fondo4.jpeg)
+}
+.fondo1{
+    width: 100%;
+    background-image: url(../assets/img/fondo5.jpeg)
+}
+
+
