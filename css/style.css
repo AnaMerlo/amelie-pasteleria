@@ -17,27 +17,28 @@ body{
     font-size: 1rem;
     overflow-x: hidden;
 }
-/* .header{ 
+/* .header{
     width: 100%;
     height: 100%;
 }*/
 .header__nav{
     min-height: 100vh;
-    min-width: 200px;
+    min-width: 100vw;
     position: relative;
 }
 .header__ul{
+    flex-direction: row;
     padding-top: 100px;
     text-align: center;
-    justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
+    justify-content: center;
     margin: auto;
     position: relative;
-    z-index: 10;    
+    z-index: 10;
 }
 .header__li{
+    align-self: center;
     list-style: none;
     padding: 20px;
 }
@@ -48,7 +49,7 @@ body{
     color: black;
     text-transform: uppercase;
     background-color: transparent;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 16px;
 }
 .header__a:hover{
@@ -68,26 +69,31 @@ video{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: rgb(215 207 207 / 24%);
     opacity: 0.5;
     mix-blend-mode: overlay;
 }
-.fijo a{
-    margin: 10px 10px 10px 10px;
+
+.fijo__a{
     padding: 10px;
-    font-size: 16px;
+    font-size: 0.8rem;
     text-decoration: none;
     position: fixed;
     right: 75px;
     bottom: 25px;
-    border-radius: 25px;
-    height: 35px;
-    padding: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
     width: 140px;
-    background-color: rgba(27, 25, 58, 0.842);
-    color: white;
+    background-color: rgba(246, 246, 252, 0.89);
+    color: black;
     text-align: center;
+}
+
+.fijo__a:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: white;
 }
 
 /* button{ */
@@ -121,13 +127,13 @@ video{
 
 
 .header__span{
-    display: inline-block;
-    width: 100%;
-    font-family: 'Playfair Display', serif;
-    font-size: 55px;
-    text-align: center;
+    left: 100px;
     position: absolute;
-    top: 200px;
+    top: 60px;
+}
+.header__img{
+    width: 150px;
+    height: 150px;
 }
 /* main{ */
     /* min-height: 100vh; */
@@ -144,7 +150,8 @@ video{
     font-family: "PlayfairDisplay-Bold";
     font-size: 40px;
     text-align: center;
-    margin: 50px 0px 50px 0px;
+    margin: 100px 0px 100px 0px;
+
 }
 
 .main__section{
@@ -157,22 +164,28 @@ video{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse ;
+    flex-direction: row ;
     justify-content: center;
     align-content: center;
 }
-
-
+/* slider de imagenes en index con bootstrap */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    grid-auto-rows: 22rem;
+    gap: 1rem;
+}
 .section__img{
-    height: 800px;
     padding: 10px;
     flex: 0;
 }
 .section__img--mh{
-    max-height: 500px;
+    max-height: 20rem;
+}
+.section__img--minh{
+    width: 500px;
 }
 .section__flex1{
-    height: 800px;
     flex: 1;
     padding-top: 10px;
     padding-right: 20px;
@@ -198,10 +211,11 @@ video{
 /* cambiar a metodologia bem queda entonces titulo=main__h3 */
 
 .section__div{
-width: 300px;
-height: 300px;
-margin: 20px;
-text-align: center;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    text-align: center;
 }
 .section__img--300{
     width: 100%;
@@ -228,6 +242,7 @@ text-align: center;
     color: rgba(34, 29, 29, 0.363);
 }
 .section__p--num{
+    display: block;
     text-align: left;
     font-size: 1rem;
     font-weight: 600;
@@ -257,22 +272,22 @@ text-align: center;
 }
 /* me que footer terminar con BEM */
 .footer{
-    background-color: #6f7877;
+    background-color: #3f3f3f;
     height: 300px;
 }
 .footer__p{
     font-family: 'Playfair Display', serif;
     font-size: 30px;
-    color: black;
+    color: white;
     height: 70px;
     min-width: 200px;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 28px;
 }
 .footer__p--20{
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    color: black;
+    color: white;
     text-align: center;
     padding-top: 10px;
 }
@@ -283,8 +298,9 @@ text-align: center;
 }
 
 .footer__hr{
-    margin-left: 100px;
-    margin-right: 100px;
+    border-top: 1px solid white;
+    opacity: unset;
+    margin: 0rem 200px
 }
 .nav__redes{
     width: 100%;
@@ -305,6 +321,7 @@ text-align: center;
     height: 20px;
 }
 .footer__div{
+    color: #fbfbfb82;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -326,12 +343,10 @@ text-align: center;
 .header__ul--50{
     padding-top: 50px;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    width: 800px;
     margin: auto;
-
 }
 
 .header__a--16{
@@ -353,6 +368,9 @@ text-align: center;
     background-color: whitesmoke;
     padding-top: 0;
 }
+.main--unite{
+    background-color: #F4F4ED;
+}
 .main__bg{
     background-image: url(../assets/img/cupcake2.jpeg);
     background-size: cover;
@@ -366,7 +384,7 @@ text-align: center;
     background-repeat: no-repeat;
 }
 .main__bg--url1{
-    background-image: url(../assets/img/fondo1.jpeg);
+    background-image: url(../assets/img/fondo\ 1.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -406,11 +424,16 @@ text-align: center;
 }
 /* segunda seccion form */
 
-.main__section--20{
-    padding-top: 20px;
-    padding-bottom: 20px;
+
+.form__selec{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
 }
 .section__h3{
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-family: "PlayfairDisplay-Bold";
     font-size: 40px;
     color: #333;
@@ -419,9 +442,13 @@ text-align: center;
 }
 
 .section__fieldset{
-    width: 500px;
-    height: 800px;
+    width: 450px;
+    height: 700px;
     margin: auto;
+}
+.section__fieldset--margin{
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.623);
 }
 .fieldset{
     border-width: 6px;
@@ -437,10 +464,10 @@ text-align: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
-    width: 350px;
-    height: 700px;
+    width: 400px;
+    height: 650px;
     padding: 10px;
 }
 .fieldset__label{
@@ -448,23 +475,39 @@ text-align: center;
     display: inline-block;
 }
 form input{
-    width: 200px;
-    height: 20px;
-    border-radius: 3px;
-    margin: 5px 0;
-    padding-left: 5px;
+    width: 75%;
+    border: 1px solid #e6e6e6;
+    font-size: 0.8rem;
+    margin: 5px;
+    padding: 1rem;
 }
+form input[type="text"]{
+    
+    display: block;
+}
+form input[type="email"]{
+    display: block;
+    
+}
+form input[type="tel"]{
+    display: block;
 
+}
+form input[type="number"]{
+    display: block;
+    
+}
 
 form input[type="submit"],
 form input[type="reset"]{
-    width: 100px;
-    height: 25px;
+    width: 110px;
+    height: 40px;
     padding: 5px;
     color: white;
-    background-color: black;
+    background-color: #cb1919;
     border-radius: 3px;
     display: inline-block;
+    font-weight: bold;
 }
 form input[type="submit"],
 form input[type="reset"]:hover{
@@ -482,6 +525,30 @@ form textarea{
     padding-top: 3px;
     padding-left: 5px;
 }
+/* unite formulario , usar grid system de boots*/
+
+.main__form{
+    height: 400px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.main__grid{
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 1.5rem;
+}
+
+.main__flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
 
 /* tienda online */
 
@@ -492,35 +559,306 @@ form textarea{
     width: 100%;
     height: 450px;
 }
+.section--grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
 
 /* aside + figure */
 
 .div{
-    width:100%;
-    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 40px;
     display: flex;
+    justify-content: center;
 }
 .aside{
-    width: 40%;
-    height: 100%;
-    padding: 20px;
-    align-items: center;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: flex-start;
+    gap: 1rem;
 }
-.main__section--60{
-    width: 60%;
-    height: 100%;
-    padding-right: 100px;
-}
+/* .main__section--60{ */
+    /* width: 60%; */
+    /* height: 100%; */
+    /* padding-right: 100px; */
+/* } */
 
 .aside__ul{
     padding-top: 0;
     width: 500px;
-    text-align:left;
+    align-items: center;
     flex-direction: column;
     justify-content: end;
     margin: 20px 0px 20px 0px;
 }
 
-/* nosotros */
+/* unite */
+
+.people--1{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    justify-self: center;
+    
+}
+.figure__people1{
+    height: 100%;
+}
+.people--3{
+    width: 300px;
+    height: 300px;
+}
+.figure__people3{
+    height: 100%;
+}
+.figure__people{
+    overflow: hidden;
+    justify-self: center;
+    width: 150px;
+    border-radius: 50%;
+}
+.main__unite{
+    width: 100%;
+}
+
+
+/* animaciones */
+
+@keyframes letras{
+    0%{
+        transform: translateY(0) translateX(0);
+    }
+    100%{
+        transform: translateY(-100px) translateX(100px);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .bg__0{
+        --bs-bg-opacity: 0;
+    } 
+}
+/* media para 1024px */
+
+@media screen and (max-width: 1024px){
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    }
+    .aside{
+        display: none;
+    }
+}
+/* media para 768px */
+/* unite */
+@media screen and (max-width: 768px){
+    
+    .main__form{
+        height: 500px;
+        justify-content: space-around;
+        display: flex;
+        grid-column: 4/10;
+        flex-direction: column;
+        width: 500px;
+    }
+    .main__flex{
+        gap: 0;
+    }
+    form input[type="text"]{
+        width: 250px;
+    }
+    form input[type="number"]{
+        width: 200px;
+    }
+    .figure{
+        display: none;
+    }
+    /* contacto solo cuestiones esteticas, el fondo del formulario, tipo de letra, etc */
+    /*  nosotros */
+    .main__h2{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .main__section{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section__img{
+        padding: 0;
+    }
+    .section__img--minh{
+        width: 380px;
+        min-height: 0;
+    }
+    /* amelie */
+
+    .section__img--mh{
+        width: 380px;
+        max-height: 280px;
+    }
+    .section__div{
+        width: 200px;
+        height: 100%;
+    }
+    .fijo a{
+        right: 30vw;
+    }
+    .grid{
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* hasta que pueda usar boots saco las categorias y el buscardor, aplicar despues menu hamburguesa */
+    /* tienda */
+    .aside{
+        display: none;
+    }
+    .section--grid{
+        gap: 0;
+    }
+}
+/* MEDIA QUERIES MIN 320PX */
+/* HOME */
+@media screen and (max-width: 320px) {
+
+    .header__ul{
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 730px;
+    }
+    .header__img{
+        width: 100px;
+        height: 100px;
+    }
+    .header__a{
+        filter: invert(1);
+        font-weight: 550;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    .main__section{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .section__img--mh{
+        width: 300px;
+        max-height: 300px;
+    }
+    .section__img{
+        padding: 0px;
+    }
+    .grid{
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__hr{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .fijo__a{
+        left: 170px;
+        padding: 2px;
+        height: 35px;
+        font-size: 14px;
+        bottom: 40px;
+    }
+    
+    /* UNITE AL EQUIPO */
+    .header__ul--50{
+        flex-direction: column;
+
+    }
+    .d-0{
+        display: none;
+        
+    }
+    .people--1{
+        align-self: end;
+        width: 250px;
+        height: 250px;
+    }
+    .main__flex{
+        flex-direction: column;
+        gap: 0;
+    }
+    /* contacto */
+    .section__fieldset{
+        width: 320px;
+        margin: auto;
+    }
+    .fieldset__form{
+        width: 280px;
+        height: 600px;
+        padding: 0;
+    }
+    form input[type="text"]{
+        width: 250px;
+    }
+    form input[type="tel"]{
+        width: 250px;
+    }
+    form input[type="email"]{
+        width: 250px;
+    }
+    /* tienda online */
+    .aside{
+        display: none;
+    }
+    .div{
+        margin: 0;
+    }
+    .section--grid{
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+    .section__div{
+        width: 150px;
+        height: 200px;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .section__img--300{
+        width: 100%;
+        height: 100px;
+
+    }
+    .section__h4{
+        margin-top: 0;
+    }
+    .section__pie{
+        display: none;
+    }
+
+
+    /* nosotros */
+
+
+    .section__img--minh{
+        width: 300px;
+        min-height: 0;
+    }
+}
+
+
+
+
+
+
 
 
