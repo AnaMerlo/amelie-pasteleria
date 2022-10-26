@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header--100">
+    <header>
         <nav class="navbar navbar-expand-lg bg-opacity-25">
             <div class="container-fluid justify-content-end">
             
@@ -35,7 +35,7 @@
     </header> 
     <!-- termina header -->
     <!-- comienza main -->
-    <main class=" main--unite">
+    <main class="main">
         <div class="main__bg main__overlay main__bg--url1">
             <h2 class="main__h2--55">Unite al equipo</h2>
         </div>
@@ -44,7 +44,7 @@
             <div class="row justify-content-around">
             <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people2-unite.jpeg" alt="" class="figure__people1" ></div>
             <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people-unite.jpeg" alt="" class="figure__people1 " ></div>
-            <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people3.jpeg" alt="" class="figure__people3"></div>
+            <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people3.jpeg" alt="" class="figure__people1"></div>
             </div>
             </div>
         </figure>
@@ -52,37 +52,36 @@
             <h3 class="section__h3">Envianos tu CV</h3>
         </div>
         <section class="container">
-            
-                <form action="" class=" "> 
+                <form action=""> 
                     <div class="row justify-content-center p-2">
                         <!-- campo para nombre -->
                     <div class="col-md-6 ">
-                        <div>
-                            <label for="nombreApellido" ></label>
-                            <input type="text" name="nombreApellido" id="nombreApellido" required placeholder="Nombre*">
-                        </div>
-                        <!-- campo para edad -->
-                        <div>
-                            <label for="edad" ></label>
-                            <input type="number" name="edad" id="edad" placeholder="Edad*">
-                        </div>
+                    <div>
+                        <label for="nombreApellido" ></label>
+                        <input type="text" name="nombreApellido" id="nombreApellido" required placeholder="Nombre*">
+                    </div>
+                    <!-- campo para edad -->
+                    <div>
+                        <label for="edad" ></label>
+                        <input type="number" name="edad" id="edad" placeholder="Edad*">
+                    </div>
                     </div>
                     <!-- campo para telefono -->
                     <div class="col-md-6">
-                        <div> 
-                            <label for="telefono" class="main__label"></label>
-                            <input type="tel" name="telefono" id="telefono" placeholder="Teléfono*">
-                        </div>
-                        <!-- campo para correo -->
-                        <div>
-                        <label for="correoElectronico" class="main__label"></label>
-                        <input type="email" name="correoElectronico" id="correoElectronico" required placeholder="tunombre@tucorreo.com">
-                        </div>
+                    <div> 
+                        <label for="telefono" ></label>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono*">
+                    </div>
+                    <!-- campo para correo -->
+                    <div>
+                    <label for="correoElectronico" ></label>
+                    <input type="email" name="correoElectronico" id="correoElectronico" required placeholder="tunombre@tucorreo.com">
+                    </div>
                     </div>
                     <!-- campo area de interes -->
                     <div class="col-md-12">
                     <div class="form__selec">
-                    <label for="interes" class="main__label">Área de interes</label>
+                    <label for="interes" class="form__label">Área de interes</label>
                     <select name="interes" id="interes">
                     <option value="cocina">Cocina</option>
                     <option value="panadero">Panadero/a</option>
@@ -95,7 +94,7 @@
                     <!-- adjuntar cv -->
                     <div class="col-md-12">
                     
-                    <label for="adjuntar" class="main__label">Adjuntar CV</label>
+                    <label for="adjuntar" class="form__label">Adjuntar CV</label>
                     <input type="file" name="adjuntar" id="adjuntar">
                     </div>
                     
@@ -106,7 +105,7 @@
                     </div>
                 </form>
             </div>
-            <!-- </fieldset> -->
+            
             
         </section>
         
