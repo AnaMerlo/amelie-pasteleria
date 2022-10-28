@@ -1,6 +1,23 @@
 *{
     margin: 0;
+    padding: 0;
 }
-h1{
-    color: red;
-}
+
+
+// LAS VARIABLES VAN SIEMPRE ARRIBA DE TODO//
+
+@import './variables/colores';
+@import './secciones/index';
+@import './secciones/contacto';
+@import './secciones/header';
+@import './secciones/tienda';
+@import './secciones/responsive';
+
+
+
+
+
+
+
+
+

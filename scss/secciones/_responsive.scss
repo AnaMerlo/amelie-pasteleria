@@ -1,0 +1,156 @@
+/* media para 1024px */
+
+@media screen and (min-width: 1024px){
+    .bg__0{
+        --bs-bg-opacity: 0;
+    } 
+}
+
+@media screen and (max-width: 1024px){
+    .div__aside{
+        display: none;
+    }
+}
+/* media para 768px */
+/* unite */
+@media screen and (max-width: 768px){
+    //header con letras blancas
+    .header__ul{
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 730px;
+        .header__a{
+            filter: invert(1);
+            font-weight: 550;
+            margin: 0;
+            font-size: 0.8rem;
+        }
+    }
+    
+    /*  nosotros */
+    .main__h2{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .main__section{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .section__img{
+        padding: 0;
+        &--minh{
+            width: 380px;
+            min-height: 0;
+        }
+        &--mh{
+            width: 380px;
+            max-height: 280px;
+        }
+    }
+    
+    /* tienda */
+    .div__aside{
+        display: none;
+    }
+}
+/* MEDIA QUERIES Max 320PX */
+/* HOME */
+@media screen and (max-width: 320px){
+    
+    .header__ul{
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 730px;
+        .header__a{
+            filter: invert(1);
+            font-weight: 550;
+            margin: 0;
+            font-size: 0.8rem;
+        }
+    }
+    .header__img{
+        width: 100px;
+        height: 100px;
+    }
+    .main__section{
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .section__img{
+        padding: 0px;
+        &--mh{
+            width: 300px;
+            max-height: 300px;
+        }
+        /* nosotros */
+        &--minh{
+        width: 300px;
+        min-height: 0;
+        }
+    }
+
+    .footer__hr{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .fijo__a{
+        left: 170px;
+        padding: 2px;
+        height: 35px;
+        font-size: 14px;
+        bottom: 40px;
+    }
+    
+    /* UNITE AL EQUIPO */
+    .header__ul--50{
+        flex-direction: column;
+    }
+    .d-0{
+        display: none;
+    }
+    .people--1{
+        align-self: end;
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* contacto */
+    
+    .form{
+        width: auto;
+    }
+    
+    /* tienda online */
+    
+    .div{
+        margin: 0;
+        &__aside{
+            display: none;
+        }
+    }
+    .figure__grid{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .section__div{
+        width: 150px;
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        .section__h4{
+            margin-top: 0;
+        }
+        .section__img--300{
+            width: 100%;
+            height: 100px;
+        }
+        .section__pie{
+            display: none;
+        }
+    }
+}

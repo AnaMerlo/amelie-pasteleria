@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+
+html{
+    font-size: 1rem;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    font-size: 1rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+
+/* main de index */
+
+
+.main__h2{
+    font-family: $tipoGrafia;
+    font-size: 40px;
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+
+}
+
+.main__section{
+    margin-left: 155px;
+    margin-right: 155px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.tienda{
+    padding: 20px;
+    text-align: center;
+    background-color: #000;
+    &__a{
+        font-family: $tipoGrafia;
+        font-size: 22px;
+        line-height: 1.2;
+        text-decoration: none;
+        font-weight: 600;
+        color: white;
+    }
+}
+.section{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    justify-content: center;
+    align-content: center;
+    &__flex1{
+        flex: 1;
+        padding-top: 10px;
+        padding-right: 20px;
+        .section__p{
+            font-family: "Montserrat-Regular";
+            font-size: 14px;
+            min-width: 200px;
+            font-size: 1rem;
+            line-height: 1.5;
+            align-self: center;
+            &--pb10{
+                padding-bottom: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &--red{
+                color: red;
+                font-style: italic;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__img{
+        padding: 10px;
+        flex: 0;
+        &--mh{
+            max-height: 50vh;
+        }
+        &--minh{
+            width: 500px;
+        }
+    }
+}
+//imagenes  de las tortas//
+.section__div{
+    justify-self: center;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    
+    .section__h4{
+        text-align: left;
+        margin-top: 10px;
+    }
+    .section__a{
+        font-family:"'Montserrat', sans-serif" ;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: none;
+        color: black;
+        &:hover{
+            color: rgba(34, 29, 29, 0.363);
+        }
+    }
+    .section__p--num{
+        display: block;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(226, 37, 37);
+    }
+}
+//tamaño de las imagenes de tortas
+.section__img--300{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    transition: all 500ms ease-out;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+//imagenes grandes
+
+@each $imagen in desayuno, pan-sab, crumble, tarta-2, cake, torta-drip{
+    .img#{$imagen}{
+        width: 100%;
+        background-image: url(../../assets/img/#{$imagen}.jpeg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+}
+/* footer */
+
+
+.footer{
+    background-color: #3f3f3f;
+    height: 300px;
+    &__p{
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        color: white;
+        height: 70px;
+        min-width: 200px;
+        text-align: center;
+        padding-top: 28px;
+        &--20{
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+    &__hr{
+        border-top: 1px solid white;
+        opacity: unset;
+        margin: 0rem 200px
+    }
+    &__nav{
+        padding-left: 50px;
+        padding-right: 50px;
+        .nav__redes{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+            .nav__a{
+                padding: 20px;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .bi{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    &__div{
+        color: #fbfbfb82;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .footer__final{
+            text-align: center;
+            font-family: "'Montserrat', sans-serif";
+            font-size: 16px;
+        }
+    }
+}
+.fijo__a{
+    padding: 10px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: fixed;
+    right: 75px;
+    bottom: 25px;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 140px;
+    background-color: rgba(246, 246, 252, 0.89);
+    color: black;
+    text-align: center;
+    &:hover{
+        cursor: pointer;
+        background-color: #000;
+        color: white;
+    }
+}

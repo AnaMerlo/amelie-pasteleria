@@ -1,0 +1,36 @@
+/* TIENDA ONLINE */
+/* MAIN */
+
+.div{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    &__aside{
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+        gap: 1rem;
+        
+    }
+    //en el aside de tienda ver de usar un mixin o extend para reutilizar codigo en header__li, ya que no me agarra los de header__a--16
+    &__ul{
+        padding-left: 0;
+    }
+    .section__pie{
+        font-family: "courgette-regular";
+        font-size: 0.9rem;
+        color: #666;
+        letter-spacing: 1px;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+.figure__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
+}
+/* uso el header__a--16 en el aside */
