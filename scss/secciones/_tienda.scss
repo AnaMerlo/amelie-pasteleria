@@ -14,13 +14,20 @@
         gap: 1rem;
         
     }
-    //en el aside de tienda ver de usar un mixin o extend para reutilizar codigo en header__li, ya que no me agarra los de header__a--16
+
     &__ul{
         padding-left: 0;
+        .header__a--16{
+            @extend .header__a;
+            font-weight: 100;
+            color: #666;
+            &:hover{
+                font-weight: 800;
+            }
+        }
     }
     .section__pie{
-        font-family: "courgette-regular";
-        font-size: 0.9rem;
+        @include letras(0.9rem, "courgette-regular");
         color: #666;
         letter-spacing: 1px;
         text-align: left;
