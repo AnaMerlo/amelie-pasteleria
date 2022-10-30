@@ -12,7 +12,7 @@
     background: $fondoPages;
     @each $portadas in cupcake2, pionono, fondo1, fondo-letras{
         &__bg#{$portadas}{
-            background-image: url(../../assets/img/#{$portadas}.jpeg);
+            background-image: url(../assets/img/#{$portadas}.jpeg);
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;

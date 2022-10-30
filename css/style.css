@@ -173,22 +173,22 @@ body {
 .main {
   background: #f1d3f147; }
   .main__bgcupcake2 {
-    background-image: url(../../assets/img/cupcake2.jpeg);
+    background-image: url(../assets/img/cupcake2.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
   .main__bgpionono {
-    background-image: url(../../assets/img/pionono.jpeg);
+    background-image: url(../assets/img/pionono.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
   .main__bgfondo1 {
-    background-image: url(../../assets/img/fondo1.jpeg);
+    background-image: url(../assets/img/fondo1.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
   .main__bgfondo-letras {
-    background-image: url(../../assets/img/fondo-letras.jpeg);
+    background-image: url(../assets/img/fondo-letras.jpeg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; }
