@@ -43,15 +43,17 @@
         padding: 20px;
     }
     &__a{
-        @include letras(1rem, $fuente);
+        @include letras(1.2rem, $fuente);
         text-decoration: none;
         color: black;
         text-transform: uppercase;
         background-color: transparent;
         font-weight: 600;
+        text-shadow: 1px 1px gray;
         &:hover{
             color: rgba(0, 128, 0, 0.658);
-            font-weight: 500;
+            font-weight: bold;
+            
         }
     }
 
@@ -68,8 +70,11 @@
         @extend .header__a;
         font-weight: 100;
         color: #666;
+        text-shadow: none;
+        font-size: 1rem;
         &:hover{
             font-weight: 800;
         }
+        
     }
 }

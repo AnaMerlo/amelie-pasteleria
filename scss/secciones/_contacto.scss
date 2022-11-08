@@ -2,15 +2,10 @@
 
 
 /* comienza MAIN de contacto, tienda, nosotros y unite*/
-@mixin flex ($dis, $wrap, $dir, $jus){
-    display: $dis;
-    flex-wrap: $wrap;
-    flex-direction: $dir ;
-    justify-content: $jus;
-}
+
 .main{
     background: $fondoPages;
-    @each $portadas in cupcake2, pionono, fondo1, fondo-letras{
+    @each $portadas in cupcake2, pionono, fondo1, fondo-letras, cake, croissant {
         &__bg#{$portadas}{
             background-image: url(../assets/img/#{$portadas}.jpeg);
             background-size: cover;
@@ -46,7 +41,7 @@
         color: white;
     }
     .section__h3{
-        @include letras(40px, $tipoGrafia);
+        @include letras(40px, 'Kalam');
         margin-top: 50px;
         margin-bottom: 50px;
         color: #333;
@@ -89,7 +84,8 @@ form input{
     font-size: 0.8rem;
     margin: 5px;
     padding: 1rem;
-
+    outline: none;
+    border-radius: 7px;
 }
 
 form input[type="submit"],
@@ -111,6 +107,7 @@ form input[type="checkbox"]{
     width: 20px;
 }
 form textarea{
+    outline: none;
     width:100%;
     max-height: 200px;
     border-radius: 3px;

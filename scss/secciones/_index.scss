@@ -5,8 +5,14 @@
     font-size: $tamaño;
     font-family: $family;
 }
+@mixin flex ($dis, $wrap, $dir, $jus){
+    display: $dis;
+    flex-wrap: $wrap;
+    flex-direction: $dir ;
+    justify-content: $jus;
+}
 .main__h2{
-    @include letras(40px, $tipoGrafia);
+    @include letras(40px, 'Kalam');
     text-align: center;
     margin: 100px 0px 100px 0px;
 }
@@ -20,33 +26,36 @@
 .tienda{
     padding: 20px;
     text-align: center;
-    background-color: #000;
+    background-color: lighten($color: #000, $amount: 8);
     &__a{
-        @include letras(22px, $tipoGrafia);
+        @include letras(1rem, $tipoGrafia);
         line-height: 1.2;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 400;
         color: white;
+        text-transform: uppercase;
+        &:hover{
+            color: white;
+        }
+    }
+    &:hover{
+        background-color: #000;
     }
 }
-@mixin header{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row ;
-    justify-content: center;
-}
+
 .section{
-    @include header;
+    @include flex(flex, wrap, row,center);
     height: 100%;
     align-content: center;
     &__flex1{
+        max-width: 50%;
         flex: 1;
         padding-top: 10px;
         padding-right: 20px;
         .section__p{
-            @include letras(1rem, "Montserrat-Regular");
+            @include letras(1.2rem, "Montserrat-Regular");
             min-width: 200px;
-            line-height: 1.5;
+            line-height: 1.7;
             align-self: center;
             margin: 1rem;
             &--red{
@@ -67,6 +76,42 @@
         }
     }
 }
+.slider{
+    width: 300px;
+    height: 500px;
+    overflow: hidden;
+    flex: 1;
+    margin-top: 40px;
+    
+    &__ul{
+        display: flex;
+        width: 400%;
+        padding: 0;
+        animation: slider 16s infinite alternate linear ;
+    }
+    &__li{
+        list-style: none;
+        width: 100%;
+    }
+    &__img{
+        width: 100%;
+    }
+}
+
+@keyframes slider{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
 //imagenes  de las tortas//
 .section__div{
     justify-self: center;
@@ -78,11 +123,8 @@
         text-align: left;
         margin-top: 10px;
     }
-    .section__a{
-        @include letras(18px, $fuente);
-        font-weight: 300;
-        text-decoration: none;
-        color: black;
+    .section__titulo{
+        @include letras(1rem, $fuente);
         &:hover{
             color: rgba(34, 29, 29, 0.363);
         }
@@ -92,9 +134,10 @@
         text-align: left;
         font-size: 1rem;
         font-weight: 600;
-        color: rgb(226, 37, 37);
+        color: #ad172b;
     }
 }
+
 //tamaño de las imagenes de tortas
 .section__img--300{
     width: 100%;
@@ -115,7 +158,7 @@
     background-color: $fondoFooter;
     height: 300px;
     &__p{
-        @include letras(30px, $tipoSerif);
+        @include letras(30px, 'Pacifico');
         color: white;
         height: 70px;
         min-width: 200px;
@@ -139,16 +182,22 @@
         .nav__redes{
             width: 100%;
             height: 100%;
-            @include header;
+            @include flex(flex, wrap, row,center);
             align-content: space-around;
             .nav__a{
                 padding: 20px;
                 text-align: center;
                 margin-top: 10px;
+                
             }
             .bi{
                 width: 20px;
                 height: 20px;
+                &:hover{
+                    zoom: 1.5;
+                    transform: rotate(360deg);
+                    transition: .4s ease;
+                }
             }
         }
     }
@@ -164,34 +213,68 @@
     }
 }
 .fijo__a{
+    transition: .1s ease;
     padding: 10px;
     font-size: 0.8rem;
     text-decoration: none;
     position: fixed;
-    right: 75px;
+    right: -100px;
     bottom: 25px;
-    border: 2px solid black;
     border-radius: 15px;
     width: 140px;
-    background-color: rgba(246, 246, 252, 0.89);
+    background-color: #128C7E;
     color: black;
     text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
     &:hover{
         cursor: pointer;
         background-color: #000;
         color: white;
+        transform: translateX(-100px);
+        transition: .3s ease;
     }
 }
 
-//imagenes grandes
-
-// @each $imagen in desayuno, pan-sab, crumble, tarta-2, cake, torta-drip{
-//     .img#{$imagen}{
-//         width: 100%;
-//         background-image: url(../../assets/img/#{$imagen}.jpeg);
-//         background-size: cover;
-//         background-position: center center;
-//         background-repeat: no-repeat;
-//         position: relative;
-//     }
-//}
+//imagenes grande
+@each $imagen in desayuno, pan-sab, crumble, tarta-2, cake, torta-drip, lemon-pie{
+    .img#{$imagen}{
+        width: 50vw;
+        height: 50vh;
+        background-image: url(../../assets/img/#{$imagen}.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+}
+.zoom{
+    overflow: hidden;
+}
+.hidden{
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    padding-right: 5px;
+    
+}
+.transicion{
+    transition: all .3s ease;
+    &:hover{
+        transform: translateY(-30px);
+    }
+}
+.section__flex{
+    @include flex(flex, wrap, row, none);
+}
+.section__a{
+    @include letras(18px, arial);
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        &:hover{
+            color: #000;
+            text-decoration: underline ;
+        }
+}

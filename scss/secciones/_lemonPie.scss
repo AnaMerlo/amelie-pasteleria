@@ -1,0 +1,25 @@
+//main
+.main__h2--0{
+    @extend .main__h2;
+    text-align: left;
+    padding-left: 2rem;
+    margin: 50px 0px;
+}
+.main__h2--num{
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ad172b;
+}
+
+.menos{
+    width: 30px;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    outline:none;
+}
+.pl__fs{
+    @include letras(1.2rem, "courgette-regular");
+    color: #666;
+    padding-left: 2rem;
+}

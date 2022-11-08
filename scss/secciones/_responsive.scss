@@ -19,6 +19,7 @@ $breakpoints:(
             font-weight: 550;
             margin: 0;
             font-size: 0.8rem;
+            text-shadow: 1px 1px white;
         }
     }
 }
@@ -91,15 +92,7 @@ $breakpoints:(
     }
 }
 
-.fijo__a{
-    @include breakpoint(mobile){
-        left: 170px;
-        padding: 2px;
-        height: 35px;
-        font-size: 14px;
-        bottom: 40px;
-    }
-}
+
 .header__ul--50{
     @include breakpoint(mobile){
         flex-direction: column;
@@ -152,8 +145,30 @@ $breakpoints:(
         }
     }
 }
+.section__flex1{
+    @include breakpoint(mobile){
+        max-width: none;
+    }
+    @include breakpoint(tablet){
+        max-width: none;
+    }
+    @include breakpoint(desktop){
+        max-width: none;
+    }
+}
     @media screen and (min-width: 1024px){
         .bg__0{
             --bs-bg-opacity: 0;
         } 
     }
+
+.slider{
+    @include breakpoint(mobile){
+        height: auto;
+        flex: auto;
+    }
+    @include breakpoint(tablet){
+        height: auto;
+        
+    }
+}

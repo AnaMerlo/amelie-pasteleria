@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="¡Sorprendé con algo dulce a quienes más querés!">
-    <meta name="keywords" content="pasteleria, torta, bakery, tienda online, cosas dulces, empleo">
+    <meta name="keywords" content="pasteleria, torta, bakery, tienda online, cosas dulces, para regalar, cumpleaños">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
-    <title>Unite al equipo | Amélie</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Productos | Amélie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- comienza header -->
     <header>
         <nav class="navbar navbar-expand-lg bg-opacity-25">
             <div class="container-fluid justify-content-end">
@@ -25,11 +24,11 @@
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav header__ul--50">
-                    <li class="header__li"><a href="#"  class="header__a--16">UNITE AL EQUIPO</a></li>
-                <li class="header__li"><a href="./tienda.html" class="header__a--16">TIENDA</a></li>
-                <li class="header__li"><a href="../index.html" class="header__a--16">AMÉLIE</a></li>
-                <li class="header__li"><a href="./nosotros.html" class="header__a--16">NOSOTROS</a></li>
-                <li class="header__li"><a href="./contacto.html" class="header__a--16">CONTACTO</a></li>
+                    <li class="header__li"><a href="../pages/unite.html"  class="header__a--16">UNITE AL EQUIPO</a></li>
+                    <li class="header__li"><a href="../pages/tienda.html" class="header__a--16">TIENDA</a></li>
+                    <li class="header__li"><a href="../index.html" class="header__a--16">AMÉLIE</a></li>
+                    <li class="header__li"><a href="../pages/nosotros.html" class="header__a--16">NOSOTROS</a></li>
+                    <li class="header__li"><a href="../pages/contacto.html" class="header__a--16">CONTACTO</a></li>
                 </ul>
             </div>
             </div>
@@ -37,82 +36,66 @@
     </header> 
     <!-- termina header -->
     <!-- comienza main -->
-    <main class="main">
-        <div class="main__bg main__overlay main__bgfondo1">
-            <h2 class="main__h2--55">Unite al equipo</h2>
+    <main class="main ">
+        <!-- fondo con titulo -->
+        <div class="main__bg main__overlay main__bgcroissant">
+            <h2 class="main__h2--55">Desayunos</h2>
         </div>
-        <figure class="d-0">
-            <div class="container">
-            <div class="row justify-content-around">
-            <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people2-unite.jpeg" alt="" class="figure__people1" ></div>
-            <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people-unite.jpeg" alt="" class="figure__people1 " ></div>
-            <div class="people--1 col-4 p-0" data-aos="flip-left" data-aos-easing="ease-out-cubic"data-aos-duration="2000"><img src="../assets/img/people3.jpeg" alt="" class="figure__people1"></div>
-            </div>
-            </div>
-        </figure>
-        <div>
-            <h3 class="section__h3">Envianos tu CV</h3>
-        </div>
+        <!-- falta poner el buscador de productos de costado tbn -->
+        <!-- contenido -->
+        <div class="div">
+        <aside class="div__aside ">
+            <label for="buscador" class="form__label">Buscar productos</label>
+            <input type="search" name="buscador" id="buscador">
+            <ul class="div__ul">
+                <li class="header__li"><a href="#" class="header__a--16">Desayunos</a></li>
+                <li class="header__li"><a href="../productos-categoria/tartas-tortas.html" class="header__a--16 ">Tartas y tortas</a></li>
+                <li class="header__li"><a href="#" class="header__a--16">Postres</a></li>
+                <li class="header__li"><a href="#" class="header__a--16">Vegano</a></li>
+                <li class="header__li"><a href="#" class="header__a--16">Panes</a></li>
+            </ul>
+            
+        </aside>
         <section class="container">
-                <form action=""> 
-                    <div class="row justify-content-center p-2">
-                        <!-- campo para nombre -->
-                    <div class="col-md-6 ">
-                    <div>
-                        <label for="nombreApellido" ></label>
-                        <input type="text" name="nombreApellido" id="nombreApellido" required placeholder="Ingresa tu Nombre*">
+            <figure class="figure__grid row">
+                <div class="section__div col-md-3">
+                    <a href="../productos/desayuno-1.html"><img src="../assets/img/minicakes.jpeg" alt="desayuno1" class="section__img--300"></a>
+                    <h4 class="section__h4"><p  class="section__titulo">Desayuno</p></h4>
+                    <p class="section__pie">Ideal para compartir</p>
+                    <div class="section__flex">
+                        <div class="hidden">
+                            <div class="transicion">
+                                <div class="hidden section__p--num">
+                                    <p>$2800</p>
+                                </div>
+                                <div class="hidden">
+                                    <a href="" class="section__a">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- campo para edad -->
-                    <div>
-                        <label for="edad" ></label>
-                        <input type="number" name="edad" id="edad" placeholder="Ingresa tu Edad*">
+                </div>
+                <div class="section__div col-md-3">
+                    <a href="../productos/desayuno-2.html"><img src="../assets/img/desayuno 2.jpeg" alt="desayuno" class="section__img--300"></a>
+                    <h4 class="section__h4"><p  class="section__titulo">Desayuno</p></h4>
+                    <p class="section__pie">Waffles a la americana.</p>
+                    <div class="section__flex">
+                        <div class="hidden">
+                            <div class="transicion">
+                                <div class="hidden section__p--num">
+                                    <p>$3800</p>
+                                </div>
+                                <div class="hidden">
+                                    <a href="" class="section__a">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <!-- campo para telefono -->
-                    <div class="col-md-6">
-                    <div> 
-                        <label for="telefono" ></label>
-                        <input type="tel" name="telefono" id="telefono" placeholder="Ingresa tu Teléfono*">
-                    </div>
-                    <!-- campo para correo -->
-                    <div>
-                    <label for="correoElectronico" ></label>
-                    <input type="email" name="correoElectronico" id="correoElectronico" required placeholder="Ingresa tu Email">
-                    </div>
-                    </div>
-                    <!-- campo area de interes -->
-                    <div class="col-md-12">
-                    <div>
-                    <label for="interes" class="form__label">Área de interes</label>
-                    <select name="interes" id="interes">
-                    <option value="cocina">Cocina</option>
-                    <option value="panadero">Panadero/a</option>
-                    <option value="cajero">Cajero/a</option>
-                    <option value="mesero">Mesero/a</option>
-                    <option value="otro">Otro</option>
-                    </select>
-                    </div>
-                    </div>
-                    <!-- adjuntar cv -->
-                    <div class="col-md-12">
-                    
-                    <label for="adjuntar" class="form__label">Adjuntar CV</label>
-                    <input type="file" name="adjuntar" id="adjuntar">
-                    </div>
-                    
-                    <!-- campo para boton enviar -->
-                    <div class="form__flex ">
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Borrar">
-                    </div>
-                </form>
-            </div>
-            
-            
+                </div>
+                
+            </figure>
         </section>
-        
     </main>
-    <!-- termina main -->
     <!-- comienza footer -->
     <footer class="footer">
         <p class="footer__p">Amélie Pastelería</p>
@@ -138,9 +121,5 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
