@@ -32,8 +32,7 @@
     &__ul{
         @include flex(flex, wrap, row, center);
         text-align: center;
-        margin: auto;
-        padding-top: 100px;
+        
         position: relative;
         z-index: 10;
     }
@@ -45,18 +44,17 @@
     &__a{
         @include letras(1.2rem, $fuente);
         text-decoration: none;
-        color: black;
+        color: white;
         text-transform: uppercase;
         background-color: transparent;
         font-weight: 600;
-        text-shadow: 1px 1px gray;
+        text-shadow: 1px 1px black;
         &:hover{
             color: rgba(0, 128, 0, 0.658);
             font-weight: bold;
             
         }
     }
-
 }
 /* ESTE HEADER ESTA EN UNITE los reutilizo en todas las paginas menos en el index */
 /* reutilizo el header__li del index */

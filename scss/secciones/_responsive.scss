@@ -15,17 +15,19 @@ $breakpoints:(
         flex-direction: column;
         height: 730px;
         .header__a{
-            filter: invert(1);
             font-weight: 550;
             margin: 0;
             font-size: 0.8rem;
-            text-shadow: 1px 1px white;
         }
     }
 }
 /*  nosotros */
 .main__h2{
     @include breakpoint(tablet){
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    @include breakpoint(desktop){
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -40,6 +42,10 @@ $breakpoints:(
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+    @include breakpoint(desktop){
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 .section__img{
@@ -156,11 +162,11 @@ $breakpoints:(
         max-width: none;
     }
 }
-    @media screen and (min-width: 1024px){
-        .bg__0{
-            --bs-bg-opacity: 0;
-        } 
-    }
+    // @media screen and (min-width: 1024px){
+    //     .bg__0{
+    //         --bs-bg-opacity: 0;
+    //     } 
+    // }
 
 .slider{
     @include breakpoint(mobile){
@@ -168,7 +174,17 @@ $breakpoints:(
         flex: auto;
     }
     @include breakpoint(tablet){
-        height: auto;
-        
+        height: auto     
+    }
+}
+.section__p {
+    @include breakpoint(mobile){
+        margin: 1rem !important;
+    }
+    @include breakpoint(tablet){
+        margin: 1rem !important;
+    }
+    @include breakpoint(desktop){
+        margin: 1rem !important;
     }
 }
